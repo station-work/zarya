@@ -24,7 +24,7 @@ const execute = async (variables) => {
     "Content-Type": "application/json",
     "x-hasura-admin-secret": hasuraSecret,
   };
-  const headers = new Headers(meta);
+  const headers = meta
   const fetchResponse = await fetch(
     "https://station-work.herokuapp.com/v1/graphql",
     {
