@@ -9,7 +9,7 @@
    "routes": [{"handle": "filesystem"},
     {
       "src": "/",
-      "dest": "./src/erver.js"
+      "dest": "./src/server.js"
     }
   ]
 }
