@@ -6,10 +6,10 @@
 		  "use": "@vercel/node"
 	  }
   ],
-  "routers": [
-	  {
-		  "src":"/src",
-		  "dest":"/"
-	  }
+   "routes": [{"handle": "filesystem"},
+    {
+      "src": "/src",
+      "dest": "/"
+    }
   ]
 }
