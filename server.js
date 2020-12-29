@@ -43,6 +43,10 @@ const generatePassword = async (password) => {
   return hash
 }
 
+app.get('/', async (req, res) => {
+    res.send('Hello World!')
+})
+
 app.post('/signup', async (req, res) => {
   // get request input
   const { name, email, password, username } = req.body.input;

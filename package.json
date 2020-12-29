@@ -2,10 +2,10 @@
   "name": "nodejs-express-actions",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.js",
+  "main": "server.js",
   "scripts": {
-    "dev": "nodemon -r esm src/server.js",
-    "start": "node src/server.js"
+    "dev": "nodemon -r esm server.js",
+    "start": "node server.js"
   },
   "dependencies": {
     "bcrypt": "^5.0.0",
