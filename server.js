@@ -20,10 +20,15 @@ mutation ($name: String!, $email: String!, $password: String!, $username: String
 
 // execute the parent operation in Hasura
 const execute = async (variables) => {
+  const hasuraSecret = process.env.HASURA_SECRET
+  
   const fetchResponse = await fetch(
     "https://station-work.herokuapp.com/v1/graphql",
     {
       method: 'POST',
+      headers: {
+	'x-hasura-admin-secret/x-hasura-access-key':  hasuraSecret
+      },
       body: JSON.stringify({
         query: HASURA_OPERATION,
         variables
@@ -42,10 +47,6 @@ const generatePassword = async (password) => {
   
   return hash
 }
-
-app.get('/', async (req, res) => {
-    res.send('Hello World!')
-})
 
 app.post('/signup', async (req, res) => {
   // get request input
