@@ -1,34 +1,18 @@
-# nodejs-express
+# Zarya
 
-This is a starter kit for `nodejs` with `express`. To get started:
+This project is the first module to connect with station work. This name is based in [Zarya module](https://en.wikipedia.org/wiki/Zarya)
 
-Firstly, [download the starter-kit](https://github.com/hasura/codegen-assets/raw/master/nodejs-express/nodejs-express.zip) and `cd` into it.
+## Requirement
 
-```
-npm ci
-npm start
-```
+- nodejs
+- npm
+- bash
 
 ## Development
 
-The entrypoint for the server lives in `src/server.js`.
+- use npm to install dependencies: `npm install`
+- run server with start command: `npm start`
 
-If you wish to add a new route (say `/greet`) , you can add it directly in the `server.js` as:
+## Licence
 
-```js
-app.post('/greet', (req, res) => {
-  return res.json({
-    "greeting": "have a nice day"
-  });
-});
-```
-
-### Throwing erros
-
-You can throw an error object or a list of error objects from your handler. The response must be 4xx and the error object must have a string field called `message`.
-
-```js
-retun res.status(400).json({
-  message: 'invalid email'
-});
-```
+This project use Licence MIT
