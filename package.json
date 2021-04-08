@@ -4,7 +4,6 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon -r esm server.js",
     "start": "node server.js"
   },
   "dependencies": {
